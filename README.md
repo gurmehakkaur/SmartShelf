@@ -1,3 +1,5 @@
+Folder strucuture
+
 smart-shelf-system/ 
 │── backend/               # FastAPI backend
 │   ├── main.py            # API routes, handles requests from frontend & Raspberry Pis

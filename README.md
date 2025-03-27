@@ -1,4 +1,4 @@
-smart-shelf-system/
+smart-shelf-system/ 
 │── backend/               # FastAPI backend
 │   ├── main.py            # API routes, handles requests from frontend & Raspberry Pis
 │   ├── expiry_logic.py    # Determines item colors based on expiry date

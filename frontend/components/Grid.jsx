@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const shelves = ["Shelf-1", "Shelf-2", "Shelf-3", "Shelf-4", "Shelf-5", "Shelf-6"];
 const gridData = [
@@ -71,8 +71,8 @@ const slotData = [
   {"slotid": "06020604", "colour": "#FFFF00"},
   {"slotid": "06020605", "colour": "#FFFF00"},
   {"slotid": "06020606", "colour": "#FF0000"},
-  {"slotid": "06020607", "colour": "#008000"},
-  {"slotid": "06020608", "colour": "#FFFF00"},
+  {"slotid": "06020607", "colour": "#FF0000"},
+  {"slotid": "06020608", "colour": "#FF0000"},
   
   {"slotid": "06020701", "colour": "#008000"},
   {"slotid": "06020702", "colour": "#008000"},
@@ -87,10 +87,10 @@ const slotData = [
   {"slotid": "06020802", "colour": "#008000"},
   {"slotid": "06020803", "colour": "#008000"},
   {"slotid": "06020804", "colour": "#008000"},
-  {"slotid": "06020805", "colour": "#FF0000"},
-  {"slotid": "06020806", "colour": "#FFFF00"},
-  {"slotid": "06020807", "colour": "#FF0000"},
-  {"slotid": "06020808", "colour": "#FF0000"}
+  {"slotid": "06020805", "colour": "#008000"},
+  {"slotid": "06020806", "colour": "#008000"},
+  {"slotid": "06020807", "colour": "#008000"},
+  {"slotid": "06020808", "colour": "#008000"}
 ];
 
 // Create a lookup dictionary for slot colors
@@ -103,6 +103,21 @@ slotData.forEach(({ slotid, colour }) => {
 
 export default function Grid() {
   const [selectedShelf, setSelectedShelf] = useState("Shelf-1");
+  const [slotColor, setSlotColor] = useState(slotLookup["0-0"]); // Default color for slot 06020101
+
+  useEffect(() => {
+    // Simulate fetching color for slotid "06020101" from an API (or URL)
+    const fetchColorFromUrl = async () => {
+      //const response = await fetch("YOUR_API_URL_HERE"); // Replace with actual URL
+      const data = {"colour": "#FFC0CB"}//await response.json();
+      
+      // Assuming the response contains the color for slot "06020101"
+      const newColor = data?.colour || "#008000"; // Use default if color is not provided
+      setSlotColor(colorMap[newColor] || "bg-gray-500"); // Map to Tailwind class
+    };
+
+    fetchColorFromUrl();
+  }, []);
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100 p-8 border-4 border-yellow-500 relative">
@@ -116,11 +131,7 @@ export default function Grid() {
             {shelves.map((shelf) => (
               <button
                 key={shelf}
-                className={`px-6 py-3 w-full rounded-lg text-center font-semibold transition-all transform hover:scale-105 ${
-                  selectedShelf === shelf
-                    ? "bg-yellow-300 text-black"
-                    : "bg-white text-black hover:bg-yellow-200 hover:text-black"
-                }`}
+                className={`px-6 py-3 w-full rounded-lg text-center font-semibold transition-all transform hover:scale-105 ${selectedShelf === shelf ? "bg-yellow-300 text-black" : "bg-white text-black hover:bg-yellow-200 hover:text-black"}`}
                 onClick={() => setSelectedShelf(shelf)}
               >
                 {shelf}
@@ -132,12 +143,13 @@ export default function Grid() {
         {/* Grid Section */}
         <div className="flex flex-col items-center">
           <h2 className="bg-yellow-400 px-6 py-2 font-bold text-lg rounded-lg mb-4 text-white">
-            Fixture 06
+            Aisle 06
           </h2>
-          <div className="grid grid-cols-6 gap-1 border border-gray-300 p-1 bg-white">
+          <div className="grid grid-cols-8 gap-1 border border-gray-300 p-1 bg-white">
             {gridData.map((row, rowIndex) =>
               row.map((cell, colIndex) => {
-                const cellColor = slotLookup[`${rowIndex}-${colIndex}`] || "bg-gray-500";
+                const cellKey = `${rowIndex}-${colIndex}`;
+                const cellColor = (cellKey === "0-0" ? slotColor : slotLookup[cellKey]) || "bg-gray-500"; 
                 return (
                   <div
                     key={`${rowIndex}-${colIndex}`}

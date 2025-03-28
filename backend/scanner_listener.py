@@ -4,8 +4,8 @@ import re
 BACKEND_URL="http://127.0.0.1:5000/scan" # Flask backend url 
 
 # HARDCODED VALUES
-PRODUCTid="P123456"
-SCANNERid="S123456"
+PRODUCTid="06020101"
+SCANNERid="S06020101"
 
 def extractDate(scanned_code):
     """Extract expiry date from the scanned code."""

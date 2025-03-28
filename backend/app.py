@@ -25,7 +25,7 @@ def scan_product():
         "color":get_expiry_color(expiryDate)
     }) 
 
-    return jsonify({"message":"Product scanned successfully","color":shelf_data["color"]})
+    return jsonify({"productID":shelf_data["productID"],"color":shelf_data["color"]})
 
 @app.route("/shelf",methods=["GET"])
 def get_shelf():

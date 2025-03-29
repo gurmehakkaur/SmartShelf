@@ -108,12 +108,9 @@ export default function Grid() {
   useEffect(() => {
     // Simulate fetching color for slotid "06020101" from an API (or URL)
     const fetchColorFromUrl = async () => {
-      //const response = await fetch("YOUR_API_URL_HERE"); // Replace with actual URL
-      const data = {"colour": "#FFC0CB"}//await response.json();
-      
-      // Assuming the response contains the color for slot "06020101"
-      const newColor = data?.colour || "#008000"; // Use default if color is not provided
-      setSlotColor(colorMap[newColor] || "bg-gray-500"); // Map to Tailwind class
+      const response = await fetch("http://127.0.0.1:5000/shelf"); // Replace with actual URL
+      const data = await response.json();
+      setSlotColor(colorMap[data.color] || "bg-gray-500"); // Map to Tailwind class
     };
 
     fetchColorFromUrl();

@@ -8,6 +8,9 @@ Solution: Our Smart Shelf System automates expiry tracking by scanning barcodes 
 The data collected would allow main store Operator to monitor expiry trends for each product individually. This helps optimize reordering decisions, ensuring better inventory management and reducing waste. 
 
 
+* Pitch: https://www.youtube.com/watch?v=94g8o1IxeiU
+
+
 ![image](https://github.com/user-attachments/assets/ab0b814a-95ec-446c-ab76-9d71ce7b7eb0)
 ![image](https://github.com/user-attachments/assets/7d68de61-7dbe-4ed4-ba77-15b63d968dc4)
 

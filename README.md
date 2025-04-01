@@ -5,6 +5,7 @@
 ### 2. Start server
 ```sh
 # Install all required python libraries
+cd frontend
 pip install flask flask-cors cors date-time
 ```
 ```sh
@@ -13,5 +14,12 @@ python app.py
 ```
 ```sh
 #In new terminal, activate scanner
+cd frontend
 python scanner_listener.py
+```
+### 3. Start Frontend
+```sh
+cd frontend
+npm install
+npm run dev
 ```

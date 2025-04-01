@@ -4,13 +4,14 @@
 ### 1. Clone the project
 ### 2. Start server
 ```sh
-# Install all python libraries
+# Install all required python libraries
 pip install flask flask-cors cors date-time
 ```
 ```sh
+# Run main backend file
 python app.py
 ```
 ```sh
-#in new terminal, activate scanner
+#In new terminal, activate scanner
 python scanner_listener.py
 ```

@@ -6,6 +6,8 @@ Problem: Grocery stores rely on manual product expiry checks, leading to errors,
 Solution: Our Smart Shelf System automates expiry tracking by scanning barcodes and updating a digital grid. Each product’s expiry status is color-coded in real-time, ensuring soon-to-expire items are placed at the front and no expired products remain on shelves.
 
 The data collected would allow main store Operator to monitor expiry trends for each product individually. This helps optimize reordering decisions, ensuring better inventory management and reducing waste. 
+
+
 ![image](https://github.com/user-attachments/assets/ab0b814a-95ec-446c-ab76-9d71ce7b7eb0)
 ![image](https://github.com/user-attachments/assets/7d68de61-7dbe-4ed4-ba77-15b63d968dc4)
 

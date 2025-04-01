@@ -1,4 +1,4 @@
-# SMART SHELF
+# SMART SHELF - Tracking expiry can reduce 40% of food wastage in retail.
 ## Seneca Hackathon 2025
 ### 🛒 Problem & Solution
 Problem: Grocery stores rely on manual product expiry checks, leading to errors, inefficiencies, and food waste. Employees must physically inspect items, increasing labor costs and operational delays.

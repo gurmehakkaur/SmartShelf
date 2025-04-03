@@ -18,12 +18,6 @@ The data collected would allow main store Operator to monitor expiry trends for 
 ### 📌 About This Code
 We've developed the core logic for a single grid cell, ensuring accurate real-time updates of product status based on expiry dates. This logic seamlessly scales across the entire shelving system, making it adaptable for mass deployment in retail environments.
 
-### 🌟 Features  
-- Real-time expiry tracking  
-- Barcode scanning for automatic date entry  
-- Color-coded product status updates  
-- Automated front-positioning of soon-to-expire products  
-
 
 ### 👥 Contributors
 1) [Gurmehak Kaur Uppal](https://github.com/gurmehakkaur)

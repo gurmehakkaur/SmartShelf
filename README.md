@@ -18,6 +18,13 @@ The data collected would allow main store Operator to monitor expiry trends for 
 ### 📌 About This Code
 We've developed the core logic for a single grid cell, ensuring accurate real-time updates of product status based on expiry dates. This logic seamlessly scales across the entire shelving system, making it adaptable for mass deployment in retail environments.
 
+### 👥 Contributors
+1) [Gurmehak Kaur Uppal](https://github.com/gurmehakkaur)
+2) [Yukti Mulani](https://github.com/YuktiMulani)
+3) [Arshnoor Kaur](https://github.com/arshnoork-101) 
+4) [Khushi Arora](https://github.com/karora63)
+   
+
 ## How to run
 ### 1. Clone the project
 ### 2. Start server
